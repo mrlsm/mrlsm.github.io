@@ -50,7 +50,7 @@
 		  <h1 class="header-author"><a href="/">Mr lsm</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">每天做一件小事&lt;br&gt;就可以了</p>
+		<p class="header-subtitle">每天做一件小事,就可以了</p>
 		
 
 		<nav class="header-menu">
@@ -102,7 +102,7 @@
 			  <h1 class="header-author js-header-author">Mr lsm</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>每天做一件小事&lt;br&gt;就可以了<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>每天做一件小事,就可以了<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -317,6 +317,27 @@ deploy:
 <pre><code>hexo clean
 hexo d -g
 </code></pre><p>到这里为止，你已经完成了自己博客的创建了</p>
+<h4 id="配置自己的网站（域名）"><a href="#配置自己的网站（域名）" class="headerlink" title="配置自己的网站（域名）"></a>配置自己的网站（域名）</h4><p>现在你就可以去选择一个自己的域名了（在这我是去阿里云买的域名）</p>
+<p>首先去万网(<a href="http://wanwang.aliyun.com" target="_blank" rel="noopener">http://wanwang.aliyun.com</a>) 购买自己的域名。如下图选择一个自己喜欢的并且未注册的域名，新买的域名需要身份认证，大约一两天即可完成认证（不妨碍你选择已经注册的域名，谁让你有钱呢）<br><img src="https://i.imgur.com/qAS3P53.png" alt=""></p>
+<p>然后去github，点击进去你创建的那个博客仓库点击<em>create a new file here</em></p>
+<p>名字为CNAME 内容为你自己申请的域名 例如：qq.com</p>
+<p>把里面的<strong>CNAME</strong>文件拖到<strong>Hexo</strong>文件的<strong>Source</strong>目录下</p>
+<p>这边配置好了以后，来到阿里云的域名管理器来解析你的域名，如下图所示：<br><img src="https://i.imgur.com/YYhZasI.png" alt=""><br>等待你的域名解析生效并通过身份认证吧。就可以在浏览器里面输入你自己的域名访问的博客了。</p>
+<h4 id="创建和发布文章"><a href="#创建和发布文章" class="headerlink" title="创建和发布文章"></a>创建和发布文章</h4><p>想要发布新的文章，首先创建文章</p>
+<p>cd到Hexo文件夹</p>
+<pre><code>hexo new &quot;文章标题&quot;
+</code></pre><p>你可以在Hexo-&gt;Source-&gt;_post目录下看到你新创建的那个文章，还有一个配套的文件夹，里面放这边博文的图片资源</p>
+<p>使用支持MarkDown编辑器编写的打开新创建的文件，就可以写文章了，要根据MarkDown语法写出来的文章才会好看</p>
+<p>Mac的markdown编辑器，推荐mou (<a href="http://25.io/mou/" target="_blank" rel="noopener">http://25.io/mou/</a>)</p>
+<p>window下面的编辑器，推荐MarkDownPad (<a href="http://markdownpad.com/" target="_blank" rel="noopener">http://markdownpad.com/</a>)</p>
+<p>markdown具体语法参考(<a href="http://www.appinn.com/markdown/#code" target="_blank" rel="noopener">http://www.appinn.com/markdown/#code</a>)</p>
+<p>文章写好直接执行下面命令即可直接发布文章</p>
+<pre><code>hexo d -g
+</code></pre><p>如果发布时候出现错误</p>
+<pre><code>ERROR Deployer not found: git
+</code></pre><p>执行</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p>关于一些hexo命令可以查看官方文档进行配置 (<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a>)</p>
 
       
 
