@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="mrlsm的博客">
 <meta property="og:description" content="Android项目之新闻客户端 github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-18T07:14:30.630Z">
+<meta property="og:updated_time" content="2018-07-18T07:31:26.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android项目之多功能新闻客户端">
 <meta name="twitter:description" content="Android项目之新闻客户端 github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片">
@@ -206,12 +206,12 @@
 </ul>
 <h3 id="程序进入时闪屏页面"><a href="#程序进入时闪屏页面" class="headerlink" title="程序进入时闪屏页面"></a>程序进入时闪屏页面</h3><ul>
 <li>动画实现旋转RotateAnimation，缩放ScaleAnimation，渐变AlphaAnimation效果，添加动画集合AnimationSet set并启动startAnimation(set)。</li>
-<li><p>并在onAnimationEnd中判断动画是否结束,跳转页面，如果是第一次进入, 跳新手引导，否则跳主页面。</p>
-<h3 id="侧滑菜单"><a href="#侧滑菜单" class="headerlink" title="侧滑菜单"></a>侧滑菜单</h3><p>使用SlidingMenu API实现方法</p>
-<p>  SlidingMenu slidingMenu = getSlidingMenu();<br>  slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);//全屏触摸<br>  slidingMenu.setBehindOffset(200);//屏幕预留200像素宽度</p>
-</li>
+<li>并在onAnimationEnd中判断动画是否结束,跳转页面，如果是第一次进入, 跳新手引导，否则跳主页面。<h3 id="侧滑菜单"><a href="#侧滑菜单" class="headerlink" title="侧滑菜单"></a>侧滑菜单</h3>使用SlidingMenu API实现方法</li>
 </ul>
-<p>侧滑菜单的内容</p>
+<pre><code>SlidingMenu slidingMenu = getSlidingMenu(); 
+slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);//全屏触摸 
+slidingMenu.setBehindOffset(200);//屏幕预留200像素宽度
+</code></pre><p>侧滑菜单的内容</p>
 <ul>
 <li>使用Xutils访问服务器Tomcat（使用开源框架Xutils） <ul>
 <li>可以自己创建Tomcat服务器，也可以找线上服务器url地址连接。</li>
@@ -468,11 +468,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/17/github-hexo给你一个漂亮的主页/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/12/01/java-android-面试题/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          github+hexo 给你一个漂亮的主页
+          java&amp;android 面试题
         
       </div>
     </a>
