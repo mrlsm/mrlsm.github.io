@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="mrlsm的博客">
 <meta property="og:description" content="github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片） “开始体验”的Button">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-18T07:33:37.518Z">
+<meta property="og:updated_time" content="2018-07-19T03:41:33.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android项目之多功能新闻客户端">
 <meta name="twitter:description" content="github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片） “开始体验”的Button">
@@ -194,13 +194,12 @@
 <li>移动距离=第二个圆点left值 - 第一个圆点left值</li>
 <li>measure-&gt;layout(确定位置)-&gt;draw(activity的onCreate方法执行结束之后才会走此流程)</li>
 <li>mPointDis = llContainer.getChildAt(1).getLeft() - llContainer.getChildAt(0).getLeft();</li>
-<li>监听layout方法结束的事件,位置确定好之后再获取圆点间距</li>
+<li>监听layout方法结束的事件,位置确定好之后再获取圆点间距<a id="more"></a>
+<h3 id="程序进入时闪屏页面"><a href="#程序进入时闪屏页面" class="headerlink" title="程序进入时闪屏页面"></a>程序进入时闪屏页面</h3></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<h3 id="程序进入时闪屏页面"><a href="#程序进入时闪屏页面" class="headerlink" title="程序进入时闪屏页面"></a>程序进入时闪屏页面</h3><ul>
 <li>动画实现旋转RotateAnimation，缩放ScaleAnimation，渐变AlphaAnimation效果，添加动画集合AnimationSet set并启动startAnimation(set)。</li>
 <li>并在onAnimationEnd中判断动画是否结束,跳转页面，如果是第一次进入, 跳新手引导，否则跳主页面。<h3 id="侧滑菜单"><a href="#侧滑菜单" class="headerlink" title="侧滑菜单"></a>侧滑菜单</h3>使用SlidingMenu API实现方法</li>
 </ul>
