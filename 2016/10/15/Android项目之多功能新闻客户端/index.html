@@ -9,14 +9,14 @@
   <title>Android项目之多功能新闻客户端 | mrlsm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片） “开始体验”的Button">
-<meta name="keywords" content="android">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android项目之多功能新闻客户端">
 <meta property="og:url" content="http://mrlsm.github.io/2016/10/15/Android项目之多功能新闻客户端/index.html">
 <meta property="og:site_name" content="mrlsm的博客">
 <meta property="og:description" content="github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片） “开始体验”的Button">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-19T03:41:33.757Z">
+<meta property="og:updated_time" content="2018-07-23T08:51:48.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android项目之多功能新闻客户端">
 <meta name="twitter:description" content="github 地址：https://github.com/mrlsm/newsClientSide  主要功能 进入有良好的动画效果 初始进入有新手引导界面 可以浏览新闻，一键分享 侧边栏，底部标题栏，多页面切换 消息推送等  新手引导界面 介绍 引导用户使用APP的大致应用介绍（只在第一次使用时显示）   实现 可滑动的界面VIewPager（填充介绍APP的图片） “开始体验”的Button">
@@ -399,6 +399,17 @@ slidingMenu.setBehindOffset(200);//屏幕预留200像素宽度
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -585,6 +596,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
