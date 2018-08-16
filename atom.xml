@@ -104,6 +104,42 @@
   </entry>
   
   <entry>
+    <title>java&amp;android 面试题</title>
+    <link href="http://mrlsm.github.io/2016/12/01/android%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://mrlsm.github.io/2016/12/01/android常见问题整理/</id>
+    <published>2016-12-01T07:29:04.000Z</published>
+    <updated>2018-08-16T08:05:32.449Z</updated>
+    
+    <content type="html"><![CDATA[<p>###配置问题</p><p>####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住</p><p>这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。</p><p>解决办法主要有三种：</p><ul><li>一、直接下载gradle离线包。<ul><li>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下。</li><li>gradle各个版本离线包下载地址：<a href="https://services.gradle.org/distributions/" target="_blank" rel="noopener">https://services.gradle.org/distributions/</a></li><li>导入完成后，运行AS之后会自动解压，重新打开项目即可。</li></ul></li><li>二、修改项目的gradle-wrapper.properties里的gradle版本为自己电脑已有的版本。</li><li>三、点击取消后，重新在build.gradle下配置你以前使用的gradle版本。<ul><li>二三同理 修改成当前使用过的gradle版本</li></ul></li></ul><a id="more"></a><p>离线包下载导入方式</p><p>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下</p><p>####出现 Gradle’s dependency cache may be corrupt 错误</p><p><img src="https://i.imgur.com/f6MWIXu.jpg" alt=""></p><p>在gradle文件下 gradle-wrapper.properties里修改了gradle的版本，与之前没有报错的gradle版本一致。就可以了</p><p><img src="https://i.imgur.com/QoOj3dg.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###配置问题&lt;/p&gt;
+&lt;p&gt;####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住&lt;/p&gt;
+&lt;p&gt;这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。&lt;/p&gt;
+&lt;p&gt;解决办法主要有三种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一、直接下载gradle离线包。&lt;ul&gt;
+&lt;li&gt;查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下。&lt;/li&gt;
+&lt;li&gt;gradle各个版本离线包下载地址：&lt;a href=&quot;https://services.gradle.org/distributions/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://services.gradle.org/distributions/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;导入完成后，运行AS之后会自动解压，重新打开项目即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二、修改项目的gradle-wrapper.properties里的gradle版本为自己电脑已有的版本。&lt;/li&gt;
+&lt;li&gt;三、点击取消后，重新在build.gradle下配置你以前使用的gradle版本。&lt;ul&gt;
+&lt;li&gt;二三同理 修改成当前使用过的gradle版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://mrlsm.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android项目之多功能新闻客户端</title>
     <link href="http://mrlsm.github.io/2016/10/15/Android%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%A4%9A%E5%8A%9F%E8%83%BD%E6%96%B0%E9%97%BB%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
     <id>http://mrlsm.github.io/2016/10/15/Android项目之多功能新闻客户端/</id>
