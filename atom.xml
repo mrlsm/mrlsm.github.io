@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mrlsm.github.io/"/>
-  <updated>2018-07-23T08:52:29.779Z</updated>
+  <updated>2018-08-17T03:06:44.027Z</updated>
   <id>http://mrlsm.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 如何添加自定义网页</title>
+    <link href="http://mrlsm.github.io/2018/07/30/%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E9%A1%B5/"/>
+    <id>http://mrlsm.github.io/2018/07/30/添加自定义网页/</id>
+    <published>2018-07-30T04:12:12.000Z</published>
+    <updated>2018-08-17T03:06:44.027Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Hexo自定义原理"><a href="#Hexo自定义原理" class="headerlink" title="Hexo自定义原理"></a>Hexo自定义原理</h3><p>Hexo 系列的博客中的文章都是经Hexo的主题渲染的静态网页。所以Hexo博客大部分都呈现出一种高度的统一化与规范化。不过 Hexo 提供了<strong>跳过渲染</strong>功能，使得我们可以直接在博客中放入自定义网页。</p><p>比如在博客中放入图片、自定义404.html、自定义About页面、简历等</p><h4 id="创建自定义网页"><a href="#创建自定义网页" class="headerlink" title="创建自定义网页"></a>创建自定义网页</h4><p>网页可以是自己编写的，也可以是别人现成的源码（下载喜欢的页面）。</p><p>网页编写完成后，在Hexo\source目录下创建一个文件夹（文件夹名称任意，比如我创建的是about这个文件夹，部署完成后，访问<a href="http://mrlsm.github.io/about即可看到效果，依此类推）">http://mrlsm.github.io/about即可看到效果，依此类推）</a></p><a id="more"></a><p>将 html 文件放置于此文件夹，并重命名为 index.html 。</p><p><img src="https://i.imgur.com/aO25qem.png" alt=""></p><h4 id="跳过渲染"><a href="#跳过渲染" class="headerlink" title="跳过渲染"></a>跳过渲染</h4><p>跳过渲染有下述两种方法：</p><ol><li><p>在html文件中添加跳过渲染指令</p><p> 用编辑器打开放入\Hexo\source\创建的文件夹中的 index.html 文件，在开头添加如下代码即可</p><hr><h2 id="layout-false"><a href="#layout-false" class="headerlink" title=" layout: false"></a> layout: false</h2></li></ol><p>添加该指令后，执行 hexo g命令时便会跳过该 index.html文件，使得index.html不受当前 hexo 主题影响，完全是一个独立的网页，如果网页引用了 css 或 js，css 和 js 需使用外链或者将css js 文件放入index.html同目录下引用。</p><p>引用图片亦是如此</p><ol start="2"><li>在_config.yml文件中设置skip_render</li></ol><p>使用编辑器打开 Hexo 目录下的_config.yml文件，找到skip_render</p><p>skip_render一般有以下四种常用参数：</p><pre><code>跳过source目录下的 test.html: skip_render: test.html跳过source目录下 test 文件夹内所有文件：skip_render: test/*跳过source目录下 test 文件夹内所有文件包括子文件夹以及子文件夹内的文件：skip_render: test/**</code></pre><p>跳过多个路径：</p><pre><code>skip_render: - test.html - test/*</code></pre><p>添加完成后便不会渲染指定文件/文件夹。</p><ol start="3"><li>完成</li></ol><p>执行hexo g -d 发布，就可以在自己的网页上看到自定义页面了（可以制作一份自己的简历哦）。</p><p><img src="https://i.imgur.com/E0xwyv2.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Hexo自定义原理&quot;&gt;&lt;a href=&quot;#Hexo自定义原理&quot; class=&quot;headerlink&quot; title=&quot;Hexo自定义原理&quot;&gt;&lt;/a&gt;Hexo自定义原理&lt;/h3&gt;&lt;p&gt;Hexo 系列的博客中的文章都是经Hexo的主题渲染的静态网页。所以Hexo博客大部分都呈现出一种高度的统一化与规范化。不过 Hexo 提供了&lt;strong&gt;跳过渲染&lt;/strong&gt;功能，使得我们可以直接在博客中放入自定义网页。&lt;/p&gt;
+&lt;p&gt;比如在博客中放入图片、自定义404.html、自定义About页面、简历等&lt;/p&gt;
+&lt;h4 id=&quot;创建自定义网页&quot;&gt;&lt;a href=&quot;#创建自定义网页&quot; class=&quot;headerlink&quot; title=&quot;创建自定义网页&quot;&gt;&lt;/a&gt;创建自定义网页&lt;/h4&gt;&lt;p&gt;网页可以是自己编写的，也可以是别人现成的源码（下载喜欢的页面）。&lt;/p&gt;
+&lt;p&gt;网页编写完成后，在Hexo\source目录下创建一个文件夹（文件夹名称任意，比如我创建的是about这个文件夹，部署完成后，访问&lt;a href=&quot;http://mrlsm.github.io/about即可看到效果，依此类推）&quot;&gt;http://mrlsm.github.io/about即可看到效果，依此类推）&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://mrlsm.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>python之旅-基础知识</title>
@@ -75,15 +98,13 @@
     <link href="http://mrlsm.github.io/2017/12/01/android%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://mrlsm.github.io/2017/12/01/android常见问题整理/</id>
     <published>2017-12-01T04:12:12.000Z</published>
-    <updated>2018-08-16T08:09:42.883Z</updated>
+    <updated>2018-08-17T02:50:53.118Z</updated>
     
-    <content type="html"><![CDATA[<p>###配置问题</p><p>####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住</p><p>这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。</p><p>解决办法主要有三种：</p><ul><li>一、直接下载gradle离线包。<ul><li>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下。</li><li>gradle各个版本离线包下载地址：<a href="https://services.gradle.org/distributions/" target="_blank" rel="noopener">https://services.gradle.org/distributions/</a></li><li>导入完成后，运行AS之后会自动解压，重新打开项目即可。</li></ul></li><li>二、修改项目的gradle-wrapper.properties里的gradle版本为自己电脑已有的版本。</li><li>三、点击取消后，重新在build.gradle下配置你以前使用的gradle版本。<ul><li>二三同理 修改成当前使用过的gradle版本</li></ul></li></ul><a id="more"></a><p>离线包下载导入方式</p><p>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下</p><p>####出现 Gradle’s dependency cache may be corrupt 错误</p><p><img src="https://i.imgur.com/f6MWIXu.jpg" alt=""></p><p>在gradle文件下 gradle-wrapper.properties里修改了gradle的版本，与之前没有报错的gradle版本一致。就可以了</p><p><img src="https://i.imgur.com/QoOj3dg.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="配置问题"><a href="#配置问题" class="headerlink" title="配置问题"></a>配置问题</h3><h4 id="出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住"><a href="#出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住" class="headerlink" title="出现AndroidStudio导入项目在 Building * gradle project info 一直卡住"></a>出现AndroidStudio导入项目在 Building * gradle project info 一直卡住</h4><p>这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。</p><p>解决办法主要有三种：</p><ul><li>一、直接下载gradle离线包。<ul><li>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下。</li><li>gradle各个版本离线包下载地址：<a href="https://services.gradle.org/distributions/" target="_blank" rel="noopener">https://services.gradle.org/distributions/</a></li><li>导入完成后，运行AS之后会自动解压，重新打开项目即可。</li></ul></li><li>二、修改项目的gradle-wrapper.properties里的gradle版本为自己电脑已有的版本。</li><li>三、点击取消后，重新在build.gradle下配置你以前使用的gradle版本。<ul><li>二三同理 修改成当前使用过的gradle版本</li></ul></li></ul><a id="more"></a><p>离线包下载导入方式</p><p>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下</p><h4 id="出现-Gradle’s-dependency-cache-may-be-corrupt-错误"><a href="#出现-Gradle’s-dependency-cache-may-be-corrupt-错误" class="headerlink" title="出现 Gradle’s dependency cache may be corrupt 错误"></a>出现 Gradle’s dependency cache may be corrupt 错误</h4><p><img src="https://i.imgur.com/f6MWIXu.jpg" alt=""></p><p>在gradle文件下 gradle-wrapper.properties里修改了gradle的版本，与之前没有报错的gradle版本一致。就可以了</p><p><img src="https://i.imgur.com/QoOj3dg.png" alt=""></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;###配置问题&lt;/p&gt;
-&lt;p&gt;####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住&lt;/p&gt;
-&lt;p&gt;这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。&lt;/p&gt;
+      &lt;h3 id=&quot;配置问题&quot;&gt;&lt;a href=&quot;#配置问题&quot; class=&quot;headerlink&quot; title=&quot;配置问题&quot;&gt;&lt;/a&gt;配置问题&lt;/h3&gt;&lt;h4 id=&quot;出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住&quot;&gt;&lt;a href=&quot;#出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住&quot; class=&quot;headerlink&quot; title=&quot;出现AndroidStudio导入项目在 Building * gradle project info 一直卡住&quot;&gt;&lt;/a&gt;出现AndroidStudio导入项目在 Building * gradle project info 一直卡住&lt;/h4&gt;&lt;p&gt;这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。&lt;/p&gt;
 &lt;p&gt;解决办法主要有三种：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;一、直接下载gradle离线包。&lt;ul&gt;

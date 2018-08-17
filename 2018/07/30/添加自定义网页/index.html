@@ -6,16 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://mrlsm.github.io">
-  <title>mrlsm的博客</title>
+  <title>hexo 如何添加自定义网页 | mrlsm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mrlsm的博客">
-<meta property="og:url" content="http://mrlsm.github.io/index.html">
+  <meta name="description" content="Hexo自定义原理Hexo 系列的博客中的文章都是经Hexo的主题渲染的静态网页。所以Hexo博客大部分都呈现出一种高度的统一化与规范化。不过 Hexo 提供了跳过渲染功能，使得我们可以直接在博客中放入自定义网页。 比如在博客中放入图片、自定义404.html、自定义About页面、简历等 创建自定义网页网页可以是自己编写的，也可以是别人现成的源码（下载喜欢的页面）。 网页编写完成后，在Hexo\">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo 如何添加自定义网页">
+<meta property="og:url" content="http://mrlsm.github.io/2018/07/30/添加自定义网页/index.html">
 <meta property="og:site_name" content="mrlsm的博客">
+<meta property="og:description" content="Hexo自定义原理Hexo 系列的博客中的文章都是经Hexo的主题渲染的静态网页。所以Hexo博客大部分都呈现出一种高度的统一化与规范化。不过 Hexo 提供了跳过渲染功能，使得我们可以直接在博客中放入自定义网页。 比如在博客中放入图片、自定义404.html、自定义About页面、简历等 创建自定义网页网页可以是自己编写的，也可以是别人现成的源码（下载喜欢的页面）。 网页编写完成后，在Hexo\">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.imgur.com/aO25qem.png">
+<meta property="og:image" content="https://i.imgur.com/E0xwyv2.png">
+<meta property="og:updated_time" content="2018-08-17T03:06:44.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mrlsm的博客">
+<meta name="twitter:title" content="hexo 如何添加自定义网页">
+<meta name="twitter:description" content="Hexo自定义原理Hexo 系列的博客中的文章都是经Hexo的主题渲染的静态网页。所以Hexo博客大部分都呈现出一种高度的统一化与规范化。不过 Hexo 提供了跳过渲染功能，使得我们可以直接在博客中放入自定义网页。 比如在博客中放入图片、自定义404.html、自定义About页面、简历等 创建自定义网页网页可以是自己编写的，也可以是别人现成的源码（下载喜欢的页面）。 网页编写完成后，在Hexo\">
+<meta name="twitter:image" content="https://i.imgur.com/aO25qem.png">
   
     <link rel="alternative" href="/atom.xml" title="mrlsm的博客" type="application/atom+xml">
   
@@ -149,16 +156,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-添加自定义网页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-添加自定义网页" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/添加自定义网页/">hexo 如何添加自定义网页</a>
+    <h1 class="article-title" itemprop="name">
+      hexo 如何添加自定义网页
     </h1>
   
 
@@ -175,11 +180,67 @@
 <p>比如在博客中放入图片、自定义404.html、自定义About页面、简历等</p>
 <h4 id="创建自定义网页"><a href="#创建自定义网页" class="headerlink" title="创建自定义网页"></a>创建自定义网页</h4><p>网页可以是自己编写的，也可以是别人现成的源码（下载喜欢的页面）。</p>
 <p>网页编写完成后，在Hexo\source目录下创建一个文件夹（文件夹名称任意，比如我创建的是about这个文件夹，部署完成后，访问<a href="http://mrlsm.github.io/about即可看到效果，依此类推）">http://mrlsm.github.io/about即可看到效果，依此类推）</a></p>
-        
-          <a class="article-more-a" href="/2018/07/30/添加自定义网页/#more">more >></a>
-        
+<a id="more"></a>
+<p>将 html 文件放置于此文件夹，并重命名为 index.html 。</p>
+<p><img src="https://i.imgur.com/aO25qem.png" alt=""></p>
+<h4 id="跳过渲染"><a href="#跳过渲染" class="headerlink" title="跳过渲染"></a>跳过渲染</h4><p>跳过渲染有下述两种方法：</p>
+<ol>
+<li><p>在html文件中添加跳过渲染指令</p>
+<p> 用编辑器打开放入\Hexo\source\创建的文件夹中的 index.html 文件，在开头添加如下代码即可</p>
+<hr>
+<h2 id="layout-false"><a href="#layout-false" class="headerlink" title=" layout: false"></a> layout: false</h2></li>
+</ol>
+<p>添加该指令后，执行 hexo g命令时便会跳过该 index.html文件，使得index.html不受当前 hexo 主题影响，完全是一个独立的网页，如果网页引用了 css 或 js，css 和 js 需使用外链或者将css js 文件放入index.html同目录下引用。</p>
+<p>引用图片亦是如此</p>
+<ol start="2">
+<li>在_config.yml文件中设置skip_render</li>
+</ol>
+<p>使用编辑器打开 Hexo 目录下的_config.yml文件，找到skip_render</p>
+<p>skip_render一般有以下四种常用参数：</p>
+<pre><code>跳过source目录下的 test.html: skip_render: test.html
+
+跳过source目录下 test 文件夹内所有文件：skip_render: test/*
+
+跳过source目录下 test 文件夹内所有文件包括子文件夹以及子文件夹内的文件：skip_render: test/**
+</code></pre><p>跳过多个路径：</p>
+<pre><code>skip_render:
+ - test.html
+ - test/*
+</code></pre><p>添加完成后便不会渲染指定文件/文件夹。</p>
+<ol start="3">
+<li>完成</li>
+</ol>
+<p>执行hexo g -d 发布，就可以在自己的网页上看到自定义页面了（可以制作一份自己的简历哦）。</p>
+<p><img src="https://i.imgur.com/E0xwyv2.png" alt=""></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你给我买霸王<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -199,16 +260,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/添加自定义网页/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://mrlsm.github.io/2018/07/30/添加自定义网页/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/18/python之旅-基础知识/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python之旅-基础知识</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -228,456 +348,14 @@
 
 
 
-
   
-    <article id="post-python之旅-基础知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/18/python之旅-基础知识/">python之旅-基础知识</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/18/python之旅-基础知识/" class="archive-article-date">
-  	<time datetime="2018-07-18T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近开始学习python这门语言，开始接触的时候还是看知乎有人用python做爬虫工作，看起来非常有兴趣。故开始学习python的路程。</p>
-<p>都说学习一门语言最最基础的是掌握语言基础，其实我觉得不然，最基础的应该是把环境整理完善并搭建成功（快捷的编辑器会比命令行程序更能使你学习编写一门语言）。</p>
-<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>python27和python36选择一款即可。编辑器我用的是PyCharm。<br>python官方下载地址：<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a><br>PyCharm官方下载地址：<a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/</a></p>
-<p>安装以及环境的配置跟大部分软件一样（如有困难百度即可）<br>
-        
-          <a class="article-more-a" href="/2018/07/18/python之旅-基础知识/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/18/python之旅-基础知识/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-github-hexo给你一个漂亮的主页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/17/github-hexo给你一个漂亮的主页/">github+hexo 给你一个漂亮的主页</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/17/github-hexo给你一个漂亮的主页/" class="archive-article-date">
-  	<time datetime="2018-07-17T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>假如你想自定义一个带有自己style的网站，那么跟我来一起学习一下吧！</p>
-<p>我创建的这个博客是使用的github page + Hexo方法。</p>
-<h4 id="现在开始搭建属于自己的blog了"><a href="#现在开始搭建属于自己的blog了" class="headerlink" title="现在开始搭建属于自己的blog了"></a>现在开始搭建属于自己的blog了</h4><ul>
-<li>环境搭建（git、node.js）</li>
-<li>安装和配置Hexo（选择模板）</li>
-<li>配置github仓库</li>
-<li>配置自己的网址（也叫域名）</li>
-<li>创建和发布文章</li>
-</ul>
-<h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><ul>
-<li>安装git （使用git给github上传文章）</li>
-<li>安装Node.js（Hexo是基于Node.js开发的）<h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5>git官网(<a href="http://git-scm.com" target="_blank" rel="noopener">http://git-scm.com</a>)<br>从官网进行下载，并安装使用。<h5 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h5>进入官网(<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a>)<br>从官网进行下载，并安装使用。
-        
-          <a class="article-more-a" href="/2018/07/17/github-hexo给你一个漂亮的主页/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/17/github-hexo给你一个漂亮的主页/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-android常见问题整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/01/android常见问题整理/">android常见问题整理</a>
-    </h1>
   
 
-        
-        <a href="/2017/12/01/android常见问题整理/" class="archive-article-date">
-  	<time datetime="2017-12-01T04:12:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="配置问题"><a href="#配置问题" class="headerlink" title="配置问题"></a>配置问题</h3><h4 id="出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住"><a href="#出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住" class="headerlink" title="出现AndroidStudio导入项目在 Building * gradle project info 一直卡住"></a>出现AndroidStudio导入项目在 Building * gradle project info 一直卡住</h4><p>这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。</p>
-<p>解决办法主要有三种：</p>
-<ul>
-<li>一、直接下载gradle离线包。<ul>
-<li>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下。</li>
-<li>gradle各个版本离线包下载地址：<a href="https://services.gradle.org/distributions/" target="_blank" rel="noopener">https://services.gradle.org/distributions/</a></li>
-<li>导入完成后，运行AS之后会自动解压，重新打开项目即可。</li>
-</ul>
-</li>
-<li>二、修改项目的gradle-wrapper.properties里的gradle版本为自己电脑已有的版本。</li>
-<li>三、点击取消后，重新在build.gradle下配置你以前使用的gradle版本。<ul>
-<li>二三同理 修改成当前使用过的gradle版本</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/12/01/android常见问题整理/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/01/android常见问题整理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java-android-面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/01/java-android-面试题/">java&amp;android 面试题</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/01/java-android-面试题/" class="archive-article-date">
-  	<time datetime="2016-12-01T07:29:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>——-持续更新———–</p>
-<h2 id="Java部分"><a href="#Java部分" class="headerlink" title="Java部分"></a>Java部分</h2><ol>
-<li><strong>一、抽象类和接口的区别</strong><ul>
-<li>一个类只能继承单个类，但是可以实现多个接口 接口强调特定功能的实现，而抽象类强调所属关系 抽象类中的所有方法并不一定要是抽象的，你可以选择在抽象类中实现一些基本的方法。而接口要求所有的方法都必须是抽象的</li>
-</ul>
-</li>
-<li><strong>二、Override和Overload的含义和区别</strong><ul>
-<li>Overload(重载)，它可以表现类的多态性，可以是函数里面可以有相同的函数名但是参数名、返回值、类型不能相同；或者说可以改变参数、类型、返回值但是函数名字依然不变。 Override(重写)，在子类继承父类的时候子类中可以定义某方法与其父类有相同的名称和参数，当子类在调用这一函数时自动调用子类的方法，而父类相当于被覆盖（重写）了。</li>
-</ul>
-</li>
-<li><strong>三、解析XML的几种方式的原理与特点：DOM、SAX、PULL</strong><ul>
-<li>DOM：消耗内存：先把xml文档都读到内存中，然后再用DOM API来访问树形结构，并获取数据。这个写起来很简单，但是很消耗内存。要是数据过大，手机不够牛逼，可能手机直接死机。</li>
-<li>SAX：解析效率高，占用内存少，基于事件驱动的：更加简单地说就是对文档进行顺序扫描，当扫描到文档(document)开始与结束、元素(element)开始与结束、文档(document)结束等地方时通知事件处理函数，由事件处理函数做相应动作，然后继续同样的扫描，直至文档结束。</li>
-<li>PULL：与 SAX 类似，也是基于事件驱动，我们可以调用它的next（）方法，来获取下一个解析事件（就是开始文档，结束文档，开始标签，结束标签），当处于某个元素时可以调用XmlPullParser的getAttributte()方法来获取属性的值，也可调用它的nextText()获取本节点的值。
-        
-          <a class="article-more-a" href="/2016/12/01/java-android-面试题/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/01/java-android-面试题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Android项目之多功能新闻客户端" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/15/Android项目之多功能新闻客户端/">Android项目之多功能新闻客户端</a>
-    </h1>
-  
-
-        
-        <a href="/2016/10/15/Android项目之多功能新闻客户端/" class="archive-article-date">
-  	<time datetime="2016-10-15T07:13:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>github 地址：<a href="https://github.com/mrlsm/newsClientSide" target="_blank" rel="noopener">https://github.com/mrlsm/newsClientSide</a></p>
-</blockquote>
-<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><ul>
-<li>进入有良好的动画效果</li>
-<li>初始进入有新手引导界面</li>
-<li>可以浏览新闻，一键分享</li>
-<li>侧边栏，底部标题栏，多页面切换</li>
-<li>消息推送等</li>
-</ul>
-<h3 id="新手引导界面"><a href="#新手引导界面" class="headerlink" title="新手引导界面"></a>新手引导界面</h3><ul>
-<li>介绍<ul>
-<li>引导用户使用APP的大致应用介绍（只在第一次使用时显示）</li>
-</ul>
-</li>
-<li>实现<ul>
-<li>可滑动的界面VIewPager（填充介绍APP的图片）</li>
-<li>“开始体验”的Button按键 <ul>
-<li>最后一个页面显示开始体验的按钮。</li>
-</ul>
-</li>
-<li>显示下方页面指示器的小圆点<ul>
-<li>OnPageCHangelistener()来判断移动位置和距离。</li>
-<li>计算两个圆点的距离</li>
-<li>移动距离=第二个圆点left值 - 第一个圆点left值</li>
-<li>measure-&gt;layout(确定位置)-&gt;draw(activity的onCreate方法执行结束之后才会走此流程)</li>
-<li>mPointDis = llContainer.getChildAt(1).getLeft() - llContainer.getChildAt(0).getLeft();</li>
-<li>监听layout方法结束的事件,位置确定好之后再获取圆点间距
-        
-          <a class="article-more-a" href="/2016/10/15/Android项目之多功能新闻客户端/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/15/Android项目之多功能新闻客户端/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -700,8 +378,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

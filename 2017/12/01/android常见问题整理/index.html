@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://mrlsm.github.io">
   <title>android常见问题整理 | mrlsm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###配置问题 ####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住 这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。 解决办法主要有三种：  一、直接下载gradle离线包。 查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx">
+  <meta name="description" content="配置问题出现AndroidStudio导入项目在 Building * gradle project info 一直卡住这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。 解决办法主要有三种：  一、直接下载gradle离线包。 查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxx">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android常见问题整理">
 <meta property="og:url" content="http://mrlsm.github.io/2017/12/01/android常见问题整理/index.html">
 <meta property="og:site_name" content="mrlsm的博客">
-<meta property="og:description" content="###配置问题 ####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住 这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。 解决办法主要有三种：  一、直接下载gradle离线包。 查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx">
+<meta property="og:description" content="配置问题出现AndroidStudio导入项目在 Building * gradle project info 一直卡住这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。 解决办法主要有三种：  一、直接下载gradle离线包。 查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxx">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/f6MWIXu.jpg">
 <meta property="og:image" content="https://i.imgur.com/QoOj3dg.png">
-<meta property="og:updated_time" content="2018-08-16T08:09:42.883Z">
+<meta property="og:updated_time" content="2018-08-17T02:50:53.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android常见问题整理">
-<meta name="twitter:description" content="###配置问题 ####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住 这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。 解决办法主要有三种：  一、直接下载gradle离线包。 查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx">
+<meta name="twitter:description" content="配置问题出现AndroidStudio导入项目在 Building * gradle project info 一直卡住这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。 解决办法主要有三种：  一、直接下载gradle离线包。 查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxx">
 <meta name="twitter:image" content="https://i.imgur.com/f6MWIXu.jpg">
   
     <link rel="alternative" href="/atom.xml" title="mrlsm的博客" type="application/atom+xml">
@@ -176,9 +176,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###配置问题</p>
-<p>####出现AndroidStudio导入项目在 Building * gradle project info 一直卡住</p>
-<p>这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。</p>
+        <h3 id="配置问题"><a href="#配置问题" class="headerlink" title="配置问题"></a>配置问题</h3><h4 id="出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住"><a href="#出现AndroidStudio导入项目在-Building-gradle-project-info-一直卡住" class="headerlink" title="出现AndroidStudio导入项目在 Building * gradle project info 一直卡住"></a>出现AndroidStudio导入项目在 Building * gradle project info 一直卡住</h4><p>这种情况多半是导入的项目使用的gradle与你当前使用的版本不一致，正在下载所致。</p>
 <p>解决办法主要有三种：</p>
 <ul>
 <li>一、直接下载gradle离线包。<ul>
@@ -196,8 +194,7 @@
 <a id="more"></a>
 <p>离线包下载导入方式</p>
 <p>查看所需gradle版本：打开C:\Users\用户名.gradle\wrapper\dists\gradle-x.xx-all\xxxxxxxxxxxx，如果里面的gradle-xx-all.zip不完整（如0KB），则说明下载不成功，需要下载离线包放置到该目录下</p>
-<p>####出现 Gradle’s dependency cache may be corrupt 错误</p>
-<p><img src="https://i.imgur.com/f6MWIXu.jpg" alt=""></p>
+<h4 id="出现-Gradle’s-dependency-cache-may-be-corrupt-错误"><a href="#出现-Gradle’s-dependency-cache-may-be-corrupt-错误" class="headerlink" title="出现 Gradle’s dependency cache may be corrupt 错误"></a>出现 Gradle’s dependency cache may be corrupt 错误</h4><p><img src="https://i.imgur.com/f6MWIXu.jpg" alt=""></p>
 <p>在gradle文件下 gradle-wrapper.properties里修改了gradle的版本，与之前没有报错的gradle版本一致。就可以了</p>
 <p><img src="https://i.imgur.com/QoOj3dg.png" alt=""></p>
 
